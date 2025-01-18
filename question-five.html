@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 5</title>
+</head>
+<body>
+    <h1>Inversão de String</h1>
+    <input type="text" id="texto" placeholder="Digite uma string">
+    <button onclick="inverterString()">Inverter</button>
+    <div id="resultado"></div>
+    <script>
+        function inverterString() {
+            const texto = document.getElementById("texto").value;
+            let invertida = "";
+            for (let i = texto.length - 1; i >= 0; i--) {
+                invertida += texto[i];
+            }
+            document.getElementById("resultado").innerText = `String invertida: ${invertida}`;
+        }
+    </script>
+</body>
+</html>

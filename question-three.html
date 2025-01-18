@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <h1>Faturamento Diário</h1>
+    <div id="resultado"></div>
+    <script>
+        const faturamento = [0, 0, 300, 200, 500, 0, 0, 450, 0, 0, 600, 0, 700, 800];
+
+        const valoresValidos = faturamento.filter(valor => valor > 0);
+        const menorValor = Math.min(...valoresValidos);
+        const maiorValor = Math.max(...valoresValidos);
+        const mediaMensal = valoresValidos.reduce((acc, val) => acc + val, 0) / valoresValidos.length;
+        const diasAcimaMedia = valoresValidos.filter(valor => valor > mediaMensal).length;
+
+        document.getElementById("resultado").innerHTML = `
+            <p>Menor valor: ${menorValor}</p>
+            <p>Maior valor: ${maiorValor}</p>
+            <p>Dias acima da média: ${diasAcimaMedia}</p>
+        `;
+    </script>
+</body>
+</html>
