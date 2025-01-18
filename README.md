@@ -1,1 +1,1 @@
-Projeto desenvolvido em html e javascript local
+Projeto desenvolvido em html e javascript localmente
